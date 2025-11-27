@@ -4,11 +4,12 @@
 
 ---
 
-1. 2-input XOR gate using only 2-input NAND gates. Draw the circuit diagram. How many NAND gates are required at a minimum?
+1. A 2-input XOR gate needs to be implemented using only 2-input NAND gates. What is the minimum number of 2-input NAND gates required to construct this circuit?
+(Numeric Answer)
 
     ---
 
-2. A 3-input digital circuit (Inputs: A, B, C; Output: F) has the following truth table:
+2. A 3-input digital circuit has the following truth table:
     
     | A | B | C | F |
     |---|---|---|---|
@@ -21,29 +22,44 @@
     | 1 | 1 | 0 | 1 |
     | 1 | 1 | 1 | 0 |
 
-    Derive the canonical Sum-of-Products (SOP) expression for F directly from the truth table. Then, simplify this expression to its minimal SOP form using Boolean algebra.
+    Which of the following represents the simplified Sum-of-Products (SOP) expression for output F?
+    * A. $F = \bar{A}\bar{C} + \bar{A}B + B\bar{C}$
+    * B. $F = \bar{A}\bar{C} + B\bar{C} + \bar{A}B$
+    * C. $F = \bar{A}\bar{C} + \bar{A}B$
+    * D. $F = \bar{A}\bar{C} + BC$
 
     ---
 
-3. A 2-input Boolean function has $2^2 = 4$ possible input combinations. There are $2^4 = 16$ possible unique 2-input functions. A 3-input Boolean function has $2^3 = 8$ possible input combinations. How many unique 3-input Boolean functions exist? Explain your reasoning.
+3. A 2-input Boolean function has $2^2 = 4$ possible input combinations. There are $2^4 = 16$ possible unique 2-input functions. A 3-input Boolean function has $2^3 = 8$ possible input combinations. How many unique 3-input Boolean functions exist?
 
     ---
 
-4. Using De Morgan's Laws and other Boolean identities, simplify the following expression: $Y = \overline{(A + \overline{B}) \cdot (\overline{A} + C)}$
+4. Using De Morgan's Laws, which of the following is the simplified equivalent of the expression $Y = \overline{(A + \overline{B}) \cdot (\overline{A} + C)}$
+   * A. $Y = (\bar{A} + B) \cdot (A + \bar{C})$
+   * B. $Y = \bar{A}B + A\bar{C}$
+   * C. $Y = A\bar{B} + \bar{A}C$
+   * D. $Y = \bar{A}\bar{B} + AC$
 
     ---
 
-5. Implement a 2-input XOR gate ($Y = A \oplus B$) using only a single 2-to-1 Multiplexer (MUX) and one NOT gate.
+5. You want to implement a 2-input XOR gate ($Y = A \oplus B$) using a single 2-to-1 Multiplexer. If input A is connected to the Select line (S), what should be connected to input $I_0$ and input $I_1$?
+   * A. $I_0\ =\ B,\ I_1\ =\ B$
+   * B. $I_0\ =\ \overline{B},\ I_1\ =\ B$
+   * C. $I_0\ =\ B,\ I_1\ =\ \overline{B}$
+   * D. $I_0\ =\ 0,\ I_1\ =\ 1$
 
     ---
 
-6. Draw a block diagram illustrating how to build a 4-to-1 MUX using only 2-to-1 MUXes.
+6. To design a 4-to-1 Multiplexer using only 2-to-1 Multiplexers, how many 2-to-1 MUXes are required?
+   (Numeric Answer)
 
     ---
 
-7. A Full-Adder (FA)  adds three 1-bit inputs (A, B, Cin) and produces two outputs (Sum, Cout).
-   1. Write the Boolean expression for the Sum output .
-   2. Write the Boolean expression for the Cout output .
+7. A Full-Adder adds three inputs. Which of the following expressions correctly represent the outputs Sum and Carry-out? (MSQ)
+   * A. $Sum = A \oplus B \oplus C_{in}$
+   * B. $Sum = AB + BC_{in} + AC_{in}$
+   * C. $C_{out} = AB + C_{in}(A \oplus B)$
+   * D. $C_{out} = A \oplus B \oplus C_{in}$
 
     ---
 
@@ -51,67 +67,160 @@
 
     ---
 
-9. An Arithmetic Logic Unit (ALU) often combines the results of several independent operation units (like an adder, a subtractor, an AND unit, and an OR unit).
-   1.  What combinational component is used to select one of these four results as the final ALU output?
-   2.  If this ALU were expanded to include 8 different operations, how many select lines would this selection component require?
+9. 
+   1.  An Arithmetic Logic Unit contains several independent processing units (Adder, AND gate, OR gate, etc.) that calculate results simultaneously. Which combinational component is typically placed at the output stage to select exactly one of these results as the final ALU output?
+    * A. Decoder
+    * B. Encoder
+    * C. Multiplexer
+    * D. Register
+   2.  If this ALU were expanded to include 8 different operations, how many select lines are required to choose the correct output?(Numerical Answer)
 
     ---
 
-10. You are given a single positive-edge triggered D-flip-flop (D-FF). The inputs CLK and D are shown in the waveform below. Draw the output Q, assuming Q is initially 0.
-    **Wavediagram required**
+10. A D-Flip-Flop is positive-edge triggered.
+    * Initial State: $Q = 0$.
+    * At $T=10ns$ (Clock rising edge), $D=1$.
+    * At $T=15ns$ (Clock falling edge), $D=0$.
+    * At $T=20ns$ (Clock rising edge), $D=0$.
+      
+      What is the value of Q at T=18ns?
+
+    * A. 0 
+    * B. 1 
+    * C. High Impedance (Z) 
+    * D. Unknown (X)
 
     ---
 
-11. You are given a positive-edge triggered D-FF with a Clock Enable (CE) pin. The register only updates its value if CE is high at the positive edge of the clock. The inputs CLK, CE, and D are shown below. Draw the output Q, assuming Q is initially 0. **Wavediagram needed**
+11.  A D-Flip-Flop has a Clock Enable (CE) pin. The register updates only if CE is HIGH at the rising edge of the clock.
+    * Initial Q = 0.
+    * Clock Edge 1: $D=1, CE=0$
+    * Clock Edge 2: $D=1, CE=1$
+    * Clock Edge 3: $D=0, CE=0$
+    <br> What is the value of Q after Clock Edge 3?
+
+      * A. 0
+      * B. 1
+      * C. Z
+      * D. X
+
+     ---
+
+12. Regarding the design of a CPU Register File with 4 registers ($R0 - R3$), which of the following statements are TRUE?(MSQ)
+    * A. A Multiplexer is used to select which register data to read onto the output bus.
+    * B. A Decoder is used to select which register to enable for writing.
+    * C. To address 4 registers, the Read Select line must be 2 bits wide.
+    * D. To address 4 registers, the Write Select line must be 4 bits wide.
 
     ---
 
-12. a CPU's Register File have 4 registers.
-    1.  Explain how a multiplexer is used for the read operation . How many select lines would be needed for a 4-register file?
-    2.  Explain how a decoder (implied by the write select logic) is used for the write operation . What other signal is necessary to prevent the register from changing on every clock cycle?
-
-    ---
-
-13. Explain the concept of concurrency  in Hardware Description Languages. How does the behavior of the following two Verilog `assign` statements fundamentally differ from the same statements written in a sequential programming language like C?
+13. Consider the following Verilog code:
     ```
     assign t1 = a & b;  // Statement 1
     assign y  = t1 | c; // Statement 2
     ```
+    Unlike C programming, how does Verilog treat these lines?
+    * A. Line 1 is always executed before Line 2. 
+    * B. They execute concurrently; if c changes, Line 2 evaluates immediately, regardless of Line 1. 
+    * C. They execute sequentially; Line 2 only evaluates after Line 1 finishes. 
+    * D. Line 2 cannot evaluate until t1 is stable.
 
     ---
 
-14. In the code from Q13, if the input `c` changes, which `assign` statement(s) are re-evaluated? If the input `a` changes, which `assign` statement(s) are re-evaluated?
+14. In the code above, which assign statements will be re-evaluated if the input `a` changes logic state?
+    * A. Only Statement 1 
+    * B. Only Statement 2 
+    * C. Statement 1, and subsequently Statement 2 (if t1 changes) 
+    * D. Neither statement
 
     ---
 
-15. Name and briefly describe the three Verilog modeling styles discussed in the lecture.
+15. Which of the following are recognized modeling styles in Verilog?(MSQ)
+    * A. Dataflow Modeling  
+    * B. Behavioral Modeling  
+    * C. Structural Modeling  
+    * D. Physical Modeling 
 
     ---
 
-16. What is the "Rule of Thumb" for using blocking (=) versus non-blocking (<=) assignments? Which is preferred for modeling combinational logic , and which is preferred for modeling sequential logic?
+16. According to the standard "Rule of Thumb" for synthesis, which assignment operator should be used for modeling Sequential Logic (e.g., Flip-Flops)?
+    * A. Blocking assignment (=) 
+    * B. Non-blocking assignment (<=) 
+    * C. Continuous assignment (assign) 
+    * D. Equality operator (==)
 
     ---
 
-17. What specific hardware components will a synthesis tool infer from the following Verilog constructs?
+17. Match the Verilog construct to the hardware component a synthesis tool would typically infer.
     1.  `assign y = (s == 0) ? a : b;`
     2.  `always @(posedge clk)`
+    * A. 1 $\rarr$ D-Flip-Flop, 2 $\rarr$ Multiplexer 
+    * B. 1 $\rarr$ Multiplexer, 2 $\rarr$ D-Flip-Flop 
+    * C. 1 $\rarr$ Latch, 2 $\rarr$ Register 
+    * D. 1 $\rarr$ Decoder, 2 $\rarr$ Counter
 
     ---
 
-18. Explain the difference between Simulation and Synthesis. Can all Verilog code that simulates correctly also be synthesized into hardware? Provide an example from the lecture slides of a Verilog construct that is used for simulation but is not synthesizable.
+18. Which of the following Verilog constructs are generally NOT synthesizable (used for simulation only)?(MSQ)
+    * A. `initial` blocks 
+    * B. `#10` (Delays) 
+    * C. `always @(posedge clk)` 
+    * D. `$display` statements
 
     ---
 
-19. What is the purpose of a test bench? What does it mean for a test bench to be "self-checking"?
+19.  What does it mean for a test bench to be "Self-Checking"?
+    * A. It generates a waveform file for manual inspection. 
+    * B. It automatically computes expected outputs and compares them against the DUT (Design Under Test) outputs, printing errors if they mismatch. 
+    * C. It synthesizes the design into gates to check for timing errors. 
+    * D. It fixes syntax errors in the Verilog code automatically.
+
+     ---
+
+20. What are the major advantages of using an FPGA for prototyping compared to manufacturing a custom ASIC?(MSQ)
+    * A. Lower Non-Recurring Engineering (NRE) costs. 
+    * B. Faster time-to-market. 
+    * C. Higher maximum clock frequency than ASIC. 
+    * D. Ability to fix logic bugs by updating the bitstream.
 
     ---
 
-20. ASICs (Application-Specific Integrated Circuits) are custom-designed chips. What are two major advantages of using an FPGA for prototyping a design instead of manufacturing an ASIC?
+21. The fundamental programmable logic component in an FPGA is the LUT. How does a 4-input LUT implement a boolean function?
+    * A. It uses mechanical switches to rewire gates. 
+    * B. It acts as a small RAM (16x1 bits) storing the Truth Table of the function. 
+    * C. It uses a processor to calculate the boolean algebra equation. 
+    * D. It constructs the function using only NAND gates.
 
     ---
 
-21. What is the fundamental programmable logic component in an FPGA, abbreviated as LUT? How does this component's structure allow it to implement any Boolean function of its inputs?
+22. Modern FPGAs contain "Hard IP" (dedicated silicon blocks) to improve efficiency. Which of the following are examples of Hard IP commonly found in FPGAs?
+    * A. Block RAM (BRAM) 
+    * B. DSP Slices (Multipliers) 
+    * C. LUTs (Look Up Tables) 
+    * D. Clock Management Tiles (PLL/MMCM)
 
-    ---
+---
 
-22. Besides programmable logic (CLBs), FPGAs include dedicated, pre-built hardware blocks known as "hard IP macros"  for performance and efficiency. Name two examples of these blocks.
+## Answers:
+1. 4
+2. A
+3. 256
+4. B
+5. C
+6. 3
+7. A, C
+8. 38.4 ns
+9. C; 3
+10. B
+11. B
+12. A, B, C
+13. B
+14. C
+15. A, B, C
+16. B
+17. B
+18. A, B, D
+19. B
+20. A, B, D
+21. B
+22. A, B, D
