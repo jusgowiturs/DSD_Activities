@@ -113,28 +113,7 @@
 
 
 
-13. Consider the following Verilog code:
-    ```
-    assign t1 = a & b;  // Statement 1
-    assign y  = t1 | c; // Statement 2
-    ```
-    Unlike C programming, how does Verilog treat these lines?
-    - [ ]  Line 1 is always executed before Line 2. 
-    - [ ]  They execute concurrently; if c changes, Line 2 evaluates immediately, regardless of Line 1. 
-    - [ ]  They execute sequentially; Line 2 only evaluates after Line 1 finishes. 
-    - [ ]  Line 2 cannot evaluate until t1 is stable.
-
-
-
-14. In the code above, which assign statements will be re-evaluated if the input `a` changes logic state?
-    - [ ]  Only Statement 1 
-    - [ ]  Only Statement 2 
-    - [ ]  Statement 1, and subsequently Statement 2 (if t1 changes) 
-    - [ ]  Neither statement
-
-
-
-15. Which of the following are recognized modeling styles in Verilog?(MSQ)
+13. Which of the following are recognized modeling styles in Verilog?(MSQ)
     - [ ]  Dataflow Modeling  
     - [ ]  Behavioral Modeling  
     - [ ]  Structural Modeling  
@@ -142,7 +121,7 @@
 
 
 
-16. According to the standard "Rule of Thumb" for synthesis, which assignment operator should be used for modeling Sequential Logic (e.g., Flip-Flops)?
+14. According to the standard "Rule of Thumb" for synthesis, which assignment operator should be used for modeling Sequential Logic (e.g., Flip-Flops)?
     - [ ]  Blocking assignment (=) 
     - [ ]  Non-blocking assignment (<=) 
     - [ ]  Continuous assignment (assign) 
@@ -150,7 +129,7 @@
 
 
 
-17. Match the Verilog construct to the hardware component a synthesis tool would typically infer.
+15. Match the Verilog construct to the hardware component a synthesis tool would typically infer.
     1.  `assign y = (s == 0) ? a : b;`
     2.  `always @(posedge clk)`
     - [ ]  1 $\rarr$ D-Flip-Flop, 2 $\rarr$ Multiplexer 
@@ -160,7 +139,7 @@
 
 
 
-18. Which of the following Verilog constructs are generally NOT synthesizable (used for simulation only)?(MSQ)
+16. Which of the following Verilog constructs are generally NOT synthesizable (used for simulation only)?(MSQ)
     - [ ]  `initial` blocks 
     - [ ]  `#10` (Delays) 
     - [ ]  `always @(posedge clk)` 
@@ -168,7 +147,7 @@
 
 
 
-19. What does it mean for a test bench to be "Self-Checking"?
+17. What does it mean for a test bench to be "Self-Checking"?
     - [ ]  It generates a waveform file for manual inspection. 
     - [ ]  It automatically computes expected outputs and compares them against the DUT (Design Under Test) outputs, printing errors if they mismatch. git 
     - [ ]  It synthesizes the design into gates to check for timing errors. 
@@ -176,7 +155,7 @@
 
     
 
-20. What are the major advantages of using an FPGA for prototyping compared to manufacturing a custom ASIC?(MSQ)
+18. What are the major advantages of using an FPGA for prototyping compared to manufacturing a custom ASIC?(MSQ)
     - [ ]  Lower Non-Recurring Engineering (NRE) costs. 
     - [ ]  Faster time-to-market. 
     - [ ]  Higher maximum clock frequency than ASIC. 
@@ -184,7 +163,7 @@
 
 
 
-21. The fundamental programmable logic component in an FPGA is the LUT. How does a 4-input LUT implement a boolean function?
+19. The fundamental programmable logic component in an FPGA is the LUT. How does a 4-input LUT implement a boolean function?
     - [ ]  It uses mechanical switches to rewire gates. 
     - [ ]  It acts as a small RAM (16x1 bits) storing the Truth Table of the function. 
     - [ ]  It uses a processor to calculate the boolean algebra equation. 
@@ -192,11 +171,12 @@
 
 
 
-22. Modern FPGAs contain "Hard IP" (dedicated silicon blocks) to improve efficiency. Which of the following are examples of Hard IP commonly found in FPGAs?
+20. Modern FPGAs contain "Hard IP" (dedicated silicon blocks) to improve efficiency. Which of the following are examples of Hard IP commonly found in FPGAs?
     - [ ]  Block RAM (BRAM) 
     - [ ]  DSP Slices (Multipliers) 
     - [ ]  LUTs (Look Up Tables) 
     - [ ]  Clock Management Tiles (PLL/MMCM)
+
 
 
 ## Answers:
@@ -211,14 +191,12 @@
 9. C; 3
 10. B
 11. B
-12. A, B, C
-13. B
-14. C
-15. A, B, C
-16. B
+12. A, B, C 
+13. A, B, C
+14. B
+15. B
+16. A, B, D
 17. B
 18. A, B, D
 19. B
 20. A, B, D
-21. B
-22. A, B, D
