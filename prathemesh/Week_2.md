@@ -21,11 +21,19 @@
 
     
 
-2. Consider the same `mux_analysis` module. If `sel = 1'bx`, `a = 1'b1`, and `b = 1'b1`, what is the value of `y`?
-   - [ ] `1'b1` 
-   - [ ] `1'b0` 
-   - [ ] `1'bx`
-   - [ ] `1'bz`
+2. Consider the following Verilog code snippet intended to describe a combinational logic block:
+    ```
+    reg y;
+    always @(a or b) begin
+        if (sel)
+            y = a ^ b;
+    end
+    ```
+    Which of the following statements accurately describe the consequences of this coding style during Simulation and Synthesis?
+   - [ ] Simulation: If `a` and `b` are held constant and `sel` changes value, the output `y` will not update immediately.
+   - [ ] Synthesis: The synthesis tool will infer a D-Flip-Flop for `y` because the value must be preserved when `sel` is 0.
+   - [ ] Synthesis: The synthesis tool will infer a Transparent Latch for `y` because the if statement is incomplete.
+   - [ ] General: This code results in a Simulation-Synthesis Mismatch because the sensitivity list does not match the signals read in the procedural block.
   
 
 
@@ -100,7 +108,7 @@
     end
     ```
     - [ ] `y_A` infers a latch.
-    - [ ] `y_A` infers pure combinational logic (likely a MUX or AND gate).
+    - [ ] `y_A` infers pure combinational logic.
     - [ ] `y_B` infers a latch.
     - [ ] `y_B` infers pure combinational logic.
 
@@ -114,13 +122,13 @@
     end
     ```
     - [ ] It causes syntax errors in SystemVerilog.
-    - [ ] It simulates differently than the synthesized hardware (simulation mismatch).
+    - [ ] It simulates differently than the synthesized hardware.
     - [ ] It creates a transport delay of 1 time unit.
     - [ ] It forces the synthesis tool to ignore `temp`.
 
     
 
-9. You are given the following delay specifications:
+9. You are given the following snippet of code from a testbench:
     ```
     assign #3 p1 = a & b;
     assign #5 p2 = b | c;
@@ -133,7 +141,7 @@
 10. Which of the following statements correctly distinguishes a Verilog function from a task?
     - [ ] Functions can contain time-consuming statements (like `#10`), but tasks cannot.
     - [ ] Functions must return exactly one value and cannot have delays; tasks can have delays and no return value.
-    - [ ] Tasks are synthesizable, but functions are purely for testbenches.
+    - [ ] Functions are purely for testbenches, task are synthesizable.
     - [ ] Functions can call tasks, but tasks cannot call functions.
 
     
@@ -141,21 +149,21 @@
 11. Consider the "Inertial Delay" model: `assign #5 y = a`; If a pulse of width 3ns appears on input `a`, what happens at output `y`?
     - [ ] A 3ns pulse appears at `y` after a 5ns delay.
     - [ ] A 5ns pulse appears at `y`.
-    - [ ] No change appears at `y` (the pulse is filtered).
+    - [ ] No change appears at `y`.
     - [ ] The simulator throws an error.
 
     
 
 12. You are writing a self-checking testbench. Which of the following components are essential for it to function correctly?
-    - [ ] An instantiation of the Design Under Test (DUT).
+    - [ ] An instantiation of the Design Under Test.
     - [ ] An `initial` block to generate stimulus.
     - [ ] A logic analyzer connected to the FPGA.
-    - [ ] A mechanism (like `if-else` or assertions) to compare DUT outputs against expected values.
+    - [ ] A mechanism to compare DUT outputs against expected values.
 
 
 ## Answer
 1. C
-2. A
+2. A, C, D
 3. C
 4. B, C
 5. 1
@@ -165,4 +173,4 @@
 9. 7
 10. B
 11. C
-12. A, B, C
+12. A, B, D

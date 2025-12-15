@@ -149,7 +149,7 @@
 
 17. What does it mean for a test bench to be "Self-Checking"?
     - [ ]  It generates a waveform file for manual inspection. 
-    - [ ]  It automatically computes expected outputs and compares them against the DUT (Design Under Test) outputs, printing errors if they mismatch. git 
+    - [ ]  It computes expected outputs and compares them against the DUT outputs
     - [ ]  It synthesizes the design into gates to check for timing errors. 
     - [ ]  It fixes syntax errors in the Verilog code automatically.
 
@@ -165,17 +165,17 @@
 
 19. The fundamental programmable logic component in an FPGA is the LUT. How does a 4-input LUT implement a boolean function?
     - [ ]  It uses mechanical switches to rewire gates. 
-    - [ ]  It acts as a small RAM (16x1 bits) storing the Truth Table of the function. 
+    - [ ]  It acts as a small RAM storing the Truth Table of the function. 
     - [ ]  It uses a processor to calculate the boolean algebra equation. 
     - [ ]  It constructs the function using only NAND gates.
 
 
 
 20. Modern FPGAs contain "Hard IP" (dedicated silicon blocks) to improve efficiency. Which of the following are examples of Hard IP commonly found in FPGAs?
-    - [ ]  Block RAM (BRAM) 
-    - [ ]  DSP Slices (Multipliers) 
-    - [ ]  LUTs (Look Up Tables) 
-    - [ ]  Clock Management Tiles (PLL/MMCM)
+    - [ ]  Block RAM
+    - [ ]  DSP Slices 
+    - [ ]  LUTs 
+    - [ ]  Clock Management Tiles
 
 
 
