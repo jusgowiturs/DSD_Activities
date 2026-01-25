@@ -139,7 +139,7 @@
     
 
 10. Which of the following statements correctly distinguishes a Verilog function from a task?
-    - [ ] Functions can contain time-consuming statements (like `#10`), but tasks cannot.
+    - [ ] Functions must return exactly one value and cannot have delays; tasks can have delays and return value.
     - [ ] Functions must return exactly one value and cannot have delays; tasks can have delays and no return value.
     - [ ] Functions are purely for testbenches, task are synthesizable.
     - [ ] Functions can call tasks, but tasks cannot call functions.
@@ -162,7 +162,7 @@
 
 
 ## Answer
-1. C
+1. C (  )
 2. A, C, D
 3. C
 4. B, C
@@ -171,6 +171,6 @@
 7. B, C
 8. B
 9. 7
-10. B
-11. C
-12. A, B, D
+10. B 
+11. C ( The input will vanish before the delay hence no change output )
+12. A, B, D ( Testbech is only used in simulation, no use of FPGA )
