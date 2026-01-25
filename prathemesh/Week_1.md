@@ -180,23 +180,23 @@
 
 
 ## Answers:
-1. 4 (  [Check out](https://www.quora.com/How-do-I-make-a-3-input-XOR-gate-with-NAND-gates) )
+1. 4 $\to$ (  [Check out](https://www.quora.com/How-do-I-make-a-3-input-XOR-gate-with-NAND-gates) )
 2. A
-3. 256 (  $2^8  = 256$ possible functions )
+3. 256 $\to$ (  $2^8  = 256$ possible functions )
 4. B
-5. C (  [Check out](https://vlsiinterviewquestions.org/2012/04/17/xor-gate-using-21-mux/) )
-6. 3 (  [Check out](https://electronics.stackexchange.com/questions/293892/why-do-2-1-muxes-forming-4-1-mux-have-common-selector) )
-7. A, C (  [Check out](https://www.geeksforgeeks.org/digital-logic/full-adder-in-digital-logic/) )
+5. C $\to$  (  [Check out](https://vlsiinterviewquestions.org/2012/04/17/xor-gate-using-21-mux/) )
+6. 3 $\to$  (  [Check out](https://electronics.stackexchange.com/questions/293892/why-do-2-1-muxes-forming-4-1-mux-have-common-selector) )
+7. A, C $\to$  (  [Check out](https://www.geeksforgeeks.org/digital-logic/full-adder-in-digital-logic/) )
 8. 38.4 ns (  If one full adder needs time T, 32 (casdaded through caries) needs 32*T )
-9. C; 3 (  To choose one of the output Mux is best, $log_2(8) = 3$ )
+9. C; 3  $\to$ (  To choose one of the output Mux is best, $log_2(8) = 3$ )
 10. B
 11. B
 12. A, B, C 
-13. A, B, C ( [Check out](https://www.digikey.com/en/maker/tutorials/2025/part-18-types-of-modeling-in-verilog#/) )
-14. B ( [Check out](https://www.chipverify.com/verilog/verilog-blocking-non-blocking-statements#/) )
-15. B ( [Check out - `assign`](https://www.chipverify.com/verilog/verilog-assign-statement#/), [Check out - `always`](https://www.chipverify.com/verilog/verilog-always-block#/) )
-16. A, B, D (  [Check out](https://www.chipverify.com/verilog/verilog-synthesis#:~:text=Copy-,Verilog%20Constructs%20to%20Avoid,-Ensure%20that%20the) )
-17. B (  Self-checking means it generates the expected ouput itself )
-18. A, B, D (  [Check out](https://en.wikibooks.org/wiki/Programmable_Logic/FPGAs#Applications) )
-19. B (  LUTs store the truth table like a memory element )
-20. A, B, D (  LUTs are the programable logic all other are Hard IPs )
+13. A, B, C  $\to$ ( [Check out](https://www.digikey.com/en/maker/tutorials/2025/part-18-types-of-modeling-in-verilog#/) )
+14. B $\to$  ( [Check out](https://www.chipverify.com/verilog/verilog-blocking-non-blocking-statements#/) )
+15. B  $\to$ ( [Check out - `assign`](https://www.chipverify.com/verilog/verilog-assign-statement#/), [Check out - `always`](https://www.chipverify.com/verilog/verilog-always-block#/) )
+16. A, B, D  $\to$ (  [Check out](https://www.chipverify.com/verilog/verilog-synthesis#:~:text=Copy-,Verilog%20Constructs%20to%20Avoid,-Ensure%20that%20the) )
+17. B $\to$  (  Self-checking means it generates the expected ouput itself )
+18. A, B, D $\to$  (  [Check out](https://en.wikibooks.org/wiki/Programmable_Logic/FPGAs#Applications) )
+19. B $\to$  (  LUTs store the truth table like a memory element )
+20. A, B, D  $\to$ (  LUTs are the programable logic all other are Hard IPs )
