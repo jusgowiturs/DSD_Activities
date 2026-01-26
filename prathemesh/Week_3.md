@@ -117,12 +117,12 @@
 
 ## Answers:
 1. A, C, D
-2. B
-3. 100
-4. C, D
-5. B
+2. B ( `load` have higher priority )
+3. 100 ( Hint: Critical Path Delay )
+4. C, D ( [Check out](https://www.chipverify.com/verilog/verilog-blocking-non-blocking-statements#/) )
+5. B ( Hint: Blocking vs Non-blocking assignment )
 6. C
-7. A, B
+7. A, B, D ( Hint: latch vs flip-flop )
 8. B
-9. B, D
+9. B, D ( Best practices )
 10. 9
