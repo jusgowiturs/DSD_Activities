@@ -89,7 +89,7 @@
 1. C (Elimination of input to output reduces the path delay, hence increasing speed)
 2. C (In gray code encoding only one bit flip happens in adjecent states)
 3. A, B, C (Mealy outputs react immediately to input changes within the current clock cycle)
-4. B (Ensures predictable updates on clock edges and a safe initial state)
+4. B (Using an `always_ff` block ensures that the next state will predictibally update at the clock edge and wont change asynchronously)
 5. 6 (One register per state)
 6. B, C (Standard structural guidelines for synthesizable and safe FSM design)
 7. C (Moore outputs provide safer, more stable control for actuators)
