@@ -162,15 +162,15 @@
 
 
 ## Answer
-1. C (  )
-2. A, C, D
+1. C
+2. A, C, D ( [Chekc out](https://www.chipverify.com/verilog/verilog-always-block#/what-is-the-sensitivity-list:~:text=a%20sensitivity%20list.-,What%20is%20the%20sensitivity%20list%20%3F,-A%20sensitivity%20list), [Latch vs flip-flop](https://www.electronicsforu.com/technology-trends/latch-not-bad-latch-vs-flip-flop#/) )
 3. C
-4. B, C
+4. B, C ( Hint: what will happen for `sel = 1'b0` )
 5. 1
 6. B
-7. B, C
-8. B
-9. 7
-10. B 
+7. B, C ( Hint: make truth table for `y_A` )
+8. B ( Hint: run the simulation )
+9. 7 ( p1 and p2 are being calsulated parallely )
+10. B ( [Check out](https://www.chipverify.com/verilog/verilog-functions#/) )
 11. C ( The input will vanish before the delay hence no change output )
 12. A, B, D ( Testbech is only used in simulation, no use of FPGA )
