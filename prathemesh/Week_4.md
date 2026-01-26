@@ -61,7 +61,7 @@
     - [ ] `generate` blocks are only used for simulation and are not synthesizable.
     - [ ] `genvar` is a standard Verilog type used for loop variables in sequential logic.
     - [ ] Parameters can be used to configure the width and depth of hardware structures like shift registers.
-    - [ ] Default parameter values should always be provided in the module definition.
+    - [ ] Parameters can be overridden via named or positional mapping during instantiation.
 
 
 10. Observe the following SystemVerilog snippet:
