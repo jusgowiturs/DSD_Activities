@@ -32,7 +32,7 @@
     - [ ] Mixing next-state logic and state registers in a single `always` block.
 
 
-5. A Finite State Machine is designed using One-hot encoding. If the machine has 6 distinct states, how many registers (bits) will the state register contain?
+5. A Finite State Machine is designed using One-hot encoding. If the machine has 6 distinct states, how many bits will the state register contain?
 
 
 6. According to the design best practices for FSMs in SystemVerilog, which of the following should be followed? (Select all that apply)
