@@ -42,11 +42,11 @@
     - [ ] Keep next-state logic, state registers, and output logic in one large `always` block for efficiency.
 
 
-7. When implementing a Lift Controller, which output would be most appropriately designed as a Moore output to ensure system safety?
-    - [ ] `ready`: available for new calls.
-    - [ ] `emergency_stop`: triggered immediately by a sensor.
-    - [ ] `motor_up`: critical control signal for movement.
-    - [ ] `status_flags`: used for data processing.
+7. Consider a Lift Controller FSM where the `door_open_cmd` is implemented as a Mealy output dependent on the `at_target_floor` sensor. If the sensor signal experiences a brief 5ns "glitch" (noise pulse) while the elevator is in the `MOVING_UP` state, what is the most likely architectural consequence?
+    - [ ] The FSM will immediately transition to the `STOPPED` state and stay there.
+    - [ ] The `door_open_cmd` will momentarily pulse high, potentially attempting to open the doors while the lift is in motion.
+    - [ ] The system will ignore the noise because Mealy outputs are filtered by the system clock.
+    - [ ] The state register will enter a metastable state, requiring a hard reset.
 
 
 8. Why is One-hot encoding often preferred over Binary encoding for FSMs in high-speed FPGA designs?
