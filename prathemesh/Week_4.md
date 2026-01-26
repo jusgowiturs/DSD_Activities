@@ -92,7 +92,7 @@
 4. B (Using an `always_ff` block ensures that the next state will predictibally update at the clock edge and wont change asynchronously)
 5. 6 (One register per state)
 6. B, C (Standard structural guidelines for synthesizable and safe FSM design)
-7. C (Moore outputs provide safer, more stable control for actuators)
+7. B (Moore outputs depend on the state and the input)
 8. B (One hot encoding is simpler to decode)
 9. A, D, E (Parameters enable modularity while `localparam` protects internal constants)
 10.  2 (The `logic [1:0]` definition explicitly allocates 2 bits)
