@@ -36,8 +36,8 @@
 
 
 6. According to the design best practices for FSMs in SystemVerilog, which of the following should be followed? (Select all that apply)
-    - [ ] Use `always_ff` for sequential logic and `always_comb` for combinational logic.
-    - [ ] Define safe default outputs and include a default next state.
+    - [ ] Use `always_comb` for the state register and `always_ff` for next-state logic.
+    - [ ] Define default outputs and include a default next state.
     - [ ] Use enumerated types for state definitions.
     - [ ] Keep next-state logic, state registers, and output logic in one large `always` block for efficiency.
 
