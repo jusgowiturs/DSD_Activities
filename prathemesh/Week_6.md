@@ -11,7 +11,7 @@
     - [ ] Register files are often treated as pure storage rather than part of the system state, meaning it is acceptable to leave them uninitialized provided the software protocol ensures a "write-before-read" sequence.
     - [ ] In a standard synchronous write implementation, the data value present at the input is captured and stored exactly at the triggering clock edge..
     - [ ] An asynchronous read implementation implies that the output data is a combinational function of the read address, changing as soon as the address bits stabilize.
-    - [ ] An asynchronous read implementation implies that the output data is a combinational function of the read address, changing as soon as the address bits stabilize.
+    - [ ] To ensure synthesizability on FPGA resources, all register bank arrays must include a reset branch within the sequential logic to clear every storage bit.
 
 
 3. Consider the Special Case of Register 0 in a CPU register file. If $R0$ is hardwired to zero, how does this affect the decoder and MUX logic? 
