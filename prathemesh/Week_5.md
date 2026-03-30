@@ -52,7 +52,7 @@
     - [ ] Design A Pareto dominates Design B because it achieves a lower delay despite a moderate area overhead.
     - [ ] Design B Pareto dominates Design C because it achieves the smallest area across all three designs.
     - [ ] No single design Pareto dominates all others, as each design is strictly better in at least one metric.
-    - [ ] Design C Pareto dominates both A and B due to its optimal timing performance.
+    - [ ] Design C Pareto dominates both A and B due to its optimal timing performance
 
 
 10. In a Design Space Exploration graph, what does the "Pareto Frontier" represent?
