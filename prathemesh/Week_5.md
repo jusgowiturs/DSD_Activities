@@ -27,7 +27,7 @@
 5. To multiply two 8-bit signed numbers, how many partial products are generated before the summation stage?
 
 
-6. When generating partial products for an 8-bit signed multiplicand $A$ and multiplier $B$, what is the correct sign-extension for the $0^{th}$ partial product before it enters the adder tree?
+6. When computing the partial products of an 8-bit signed multiplication between multiplicand $A$ and multiplier $B$, how should the $0^{th}$ partial product be sign-extended before being fed into the adder tree?
     - [ ] Zero-extend $A$ to 16 bits.
     - [ ] Sign-extend $A$ to 16 bits.
     - [ ] Sign-extend $A$ to 9 bits.
@@ -49,9 +49,9 @@
 
 
 9. Design A has (Area=20, Delay=30). Design B has (Area=15, Delay=35). Design C has (Area=25, Delay=25). Which statement is true regarding Pareto dominance?
-    - [ ] Design A Pareto dominates Design C due to its lower resource utilization.
-    - [ ] Design B Pareto dominates Design A due to its superior area-to-delay ratio.
-    - [ ] All three designs are Pareto equivalent as no design is better on all metrics.
+    - [ ] Design A Pareto dominates Design B because it achieves a lower delay despite a moderate area overhead.
+    - [ ] Design B Pareto dominates Design C because it achieves the smallest area across all three designs.
+    - [ ] No single design Pareto dominates all others, as each design is strictly better in at least one metric.
     - [ ] Design C Pareto dominates both A and B due to its optimal timing performance.
 
 
