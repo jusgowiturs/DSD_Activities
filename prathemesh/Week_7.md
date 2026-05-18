@@ -4,10 +4,11 @@
 
 ---
 
-1. A processor is designed to evaluate the expression $Y = (A \times B) + (C \times D) - (E \times F)$. The hardware consists of one multiplier and one adder/subtractor. If every operation takes exactly one clock cycle and requires its operands to be in registers, what is the minimum number of registers required to compute $Y$ without re-loading any initial values? Assume $A, B, C, D, E, F$ are initially stored in a register file.
+1. A processor evaluates the expression $Y = (A \times B) + (C \times D) - (E \times F)$ using one multiplier and one adder/subtractor. Each operation takes exactly one clock cycle and requires its operands to be available before execution. The values $A, B, C, D, E, F$ are stored in a read-only register file and can be accessed any time without being reloaded. Assume that all intermediate and final results fit within a single register, overflow due to multiplication and addition is not considered.
+What is the minimum number of additional working registers required to compute $Y$ ?
 
 
-2. A register bank uses decoders for write selection and multiplexers for read selection. A Register File has $2^n$ registers, each $W$ bits wide. It features two asynchronous read ports and one synchronous write port. Which of the following statements regarding its hardware implementation are CORRECT?
+1. A register bank uses decoders for write selection and multiplexers for read selection. A Register File has $2^n$ registers, each $W$ bits wide. It features two asynchronous read ports and one synchronous write port. Which of the following statements regarding its hardware implementation are CORRECT?
     - [ ] The total number of 2-to-1 multiplexers required for the read circuitry is $2 \times W \times (2^n - 1)$
     - [ ] A change in the read address will reflect at the output only after the next positive edge of the clock
     - [ ] The write decoder requires $n$ input lines to uniquely address each register
@@ -68,7 +69,7 @@
 
 
 ## Answer
-1. 6
+1. 2
 2. A, C, D
 3. 27 ns
 4. B
