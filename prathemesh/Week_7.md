@@ -8,7 +8,7 @@
 What is the minimum number of additional working registers required to compute $Y$ ?
 
 
-1. Identify the correct statements regarding the hardware design of the following register file:
+2. Identify the correct statements regarding the hardware design of the following register file:
 A register bank uses decoders for write selection and multiplexers for read selection. A Register File has $2^n$ registers, each `W` bits wide, and features two asynchronous read ports and one synchronous write port.
     - [ ] The total number of 2-to-1 multiplexers required for the read circuitry is $2 \times W \times (2^n - 1)$
     - [ ] A change in the read address will reflect at the output only after the next positive edge of the clock
@@ -16,7 +16,10 @@ A register bank uses decoders for write selection and multiplexers for read sele
     - [ ] Increasing the number of registers from 8 to 16 requires one additional address bit for each port
 
 
-2. Consider an 8-bit ALU where the "Multiply" operation is implemented as a combinational array multiplier. The propagation delay of a 1-bit Full Adder is $2ns$, and the delay of an AND gate is $1ns$. Ignoring wire delays and assuming the multiplier is the slowest component in the ALU, calculate the Critical Path Delay (in ns) for the multiplication of two 8-bit unsigned integers. (Use the standard formula for an $N \times N$ carry-save array multiplier: $t_{pd} = [1 + (N-1) + (N-2)] \times t_{gate\_delay}$).
+3. A 32-bit ALU performs addition using a Ripple Carry Adder (RCA). The propagation delay of an AND gate and OR gate is 2 ns each, and an XOR gate has a propagation delay of 3 ns.
+    a. Identify the critical path within a single 1-bit Full Adder and calculate its delay.
+    b. Calculate the Critical Path Delay of the complete 32-bit RCA.
+    c. What is the maximum clock frequency (in MHz) at which this ALU can operate?
 
 
 4. A designer is creating a custom 16-bit instruction format for a 3-register operand architecture (rd, rs1, rs2). The processor supports 12 distinct ALU operations. If the designer maximizes the number of registers possible in the register file while keeping the instruction length fixed at 16 bits, how many total registers can the architecture support?
@@ -72,7 +75,7 @@ A register bank uses decoders for write selection and multiplexers for read sele
 ## Answer
 1. 2
 2. A, C, D
-3. 27 ns
+3. 4 ns, 128 ns, 7.81 MHz
 4. B
 5. 8'hC8
 6. B
