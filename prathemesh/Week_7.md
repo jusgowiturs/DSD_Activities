@@ -8,14 +8,15 @@
 What is the minimum number of additional working registers required to compute $Y$ ?
 
 
-1. A register bank uses decoders for write selection and multiplexers for read selection. A Register File has $2^n$ registers, each $W$ bits wide. It features two asynchronous read ports and one synchronous write port. Which of the following statements regarding its hardware implementation are CORRECT?
+1. Identify the correct statements regarding the hardware design of the following register file:
+A register bank uses decoders for write selection and multiplexers for read selection. A Register File has $2^n$ registers, each `W` bits wide, and features two asynchronous read ports and one synchronous write port.
     - [ ] The total number of 2-to-1 multiplexers required for the read circuitry is $2 \times W \times (2^n - 1)$
     - [ ] A change in the read address will reflect at the output only after the next positive edge of the clock
     - [ ] The write decoder requires $n$ input lines to uniquely address each register
     - [ ] Increasing the number of registers from 8 to 16 requires one additional address bit for each port
 
 
-3. Consider an 8-bit ALU where the "Multiply" operation is implemented as a combinational array multiplier. The propagation delay of a 1-bit Full Adder is $2ns$, and the delay of an AND gate is $1ns$. Ignoring wire delays and assuming the multiplier is the slowest component in the ALU, calculate the Critical Path Delay (in ns) for the multiplication of two 8-bit unsigned integers. (Use the standard formula for an $N \times N$ carry-save array multiplier: $t_{pd} = [1 + (N-1) + (N-2)] \times t_{gate\_delay}$).
+2. Consider an 8-bit ALU where the "Multiply" operation is implemented as a combinational array multiplier. The propagation delay of a 1-bit Full Adder is $2ns$, and the delay of an AND gate is $1ns$. Ignoring wire delays and assuming the multiplier is the slowest component in the ALU, calculate the Critical Path Delay (in ns) for the multiplication of two 8-bit unsigned integers. (Use the standard formula for an $N \times N$ carry-save array multiplier: $t_{pd} = [1 + (N-1) + (N-2)] \times t_{gate\_delay}$).
 
 
 4. A designer is creating a custom 16-bit instruction format for a 3-register operand architecture (rd, rs1, rs2). The processor supports 12 distinct ALU operations. If the designer maximizes the number of registers possible in the register file while keeping the instruction length fixed at 16 bits, how many total registers can the architecture support?
