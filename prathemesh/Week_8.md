@@ -53,7 +53,7 @@ What is the intermediate decimal value stored in register $r1$ immediately after
     - [ ] Because restricting the field width ensures the target address stays aligned to a word boundary.
 
 
-9. A CPU uses 8-bit addressing and each location stores 32 bits (4 bytes). What is the total storage capacity of this memory in bytes?
+9. A CPU uses an 8-bit address bus and each location stores 32 bits (4 bytes). What is the total storage capacity of this memory in bytes?
 
 
 10. For a byte-addressable memory system, 32-bit words are stored at aligned addresses. If a 32-bit word is stored starting at address $0x0004$, what is the address of the next sequential 32-bit word?
