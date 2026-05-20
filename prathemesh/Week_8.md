@@ -22,10 +22,10 @@
 
 
 4. To load the constant decimal value $1000$ into a register $r1$ using a processor with a 5-bit signed immediate limit, a programmer uses the following sequence:
-    ADDI r1, r0, 15
-    SLLI r1, r1, 6
-    ADDI r1, r1, 8
-    ADDI r1, r1, 8
+    ADDI r1, r0, 1
+    SLLI r1, r1, 10
+    ADDI r1, r1, -16
+    ADDI r1, r1, -8
 What is the intermediate decimal value stored in register $r1$ immediately after the execution of the SLLI (Shift Left Logical Immediate) instruction? 
 
 
@@ -77,7 +77,7 @@ What is the intermediate decimal value stored in register $r1$ immediately after
 1. -16
 2. B
 3. A, C
-4. 960
+4. 1024
 5. $8'h2F$
 6. B
 7. A, B, D
