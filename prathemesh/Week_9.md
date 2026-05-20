@@ -74,7 +74,7 @@ Determine the decimal integer value that must be preloaded into the timer regist
 
 ## Answers
 1. B
-2. B
+2. D
 3. D
 4. B
 5. A, B, C
