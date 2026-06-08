@@ -132,10 +132,9 @@
 15. Match the Verilog construct to the hardware component a synthesis tool would typically infer.
     1.  `assign y = (s == 0) ? a : b;`
     2.  `always @(posedge clk)`
-    - [ ]  1 $\rarr$ D-Flip-Flop, 2 $\rarr$ Multiplexer 
-    - [ ]  1 $\rarr$ Multiplexer, 2 $\rarr$ D-Flip-Flop 
-    - [ ]  1 $\rarr$ Latch, 2 $\rarr$ Register 
-    - [ ]  1 $\rarr$ Decoder, 2 $\rarr$ Counter
+    - [ ]  1 $\to$ D-Flip-Flop, 2 $\to$ Multiplexer 
+    - [ ]  1 $\to$ Multiplexer, 2 $\to$ D-Flip-Flop 
+    - [ ]  1 $\to$ Latch, 2 $\to$ Register 
 
 
 
