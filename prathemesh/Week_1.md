@@ -66,13 +66,11 @@
 
 
 
-9. 
-   1.  An Arithmetic Logic Unit contains several independent processing units (Adder, AND gate, OR gate, etc.) that calculate results simultaneously. Which combinational component is typically placed at the output stage to select exactly one of these results as the final ALU output?
+9.  An Arithmetic Logic Unit contains several independent processing units (Adder, AND gate, OR gate, etc.) that calculate results simultaneously. Which combinational component is typically placed at the output stage to select exactly one of these results as the final ALU output?
     - [ ]  Decoder
     - [ ]  Encoder
     - [ ]  Multiplexer
     - [ ]  Register
-   2.  If this ALU were expanded to include 8 different operations, how many select lines are required to choose the correct output?(Numerical Answer)
 
 
 
@@ -187,7 +185,7 @@
 6. 3 $\to$  (  [Check out](https://electronics.stackexchange.com/questions/293892/why-do-2-1-muxes-forming-4-1-mux-have-common-selector) )
 7. A, C $\to$  (  [Check out](https://www.geeksforgeeks.org/digital-logic/full-adder-in-digital-logic/) )
 8. 38.4 ns (  If one full adder needs time T, 32 (casdaded through caries) needs 32*T )
-9. C; 3  $\to$ (  To choose one of the output Mux is best, $log_2(8) = 3$ )
+9. C; 
 10. B
 11. B
 12. A, B, C 
