@@ -7,7 +7,7 @@
 1. A processor uses a 16-bit register architecture but limits the immediate operand field in its instruction encoding to 5 bits. If the processor implements sign-extension to convert this 5-bit value into a 32-bit operand for the ALU, what is the decimal value of the most negative constant that can be represented in a single `ADDI` instruction?
 
 
-2. Consider the Verilog implementation of sign-extension: `assign extended_imm = {{27{immediate[4]}}, immediate}`;. If the instruction being decoded is `ANDI r1, r2, 0x1F` (where `0x1F` is the 5-bit immediate), what will be the 32-bit hexadecimal value of extended_imm?
+2. Consider the Verilog implementation of sign-extension: `assign extended_imm = {{27{immediate[4]}}, immediate}`;. If the instruction being decoded is `ANDI r1, r2, 0x1F` (where `5'b11111` is the 5-bit immediate), what will be the 32-bit hexadecimal value of extended_imm?
     - [ ] $0x0000001F$
     - [ ] $0xFFFFFFFF$
     - [ ] $0x0000000F$
